@@ -1,6 +1,6 @@
-import 'package:chatuncle/widgets/new_transaction.dart';
-import 'package:chatuncle/widgets/transaction_list.dart';
 import 'package:flutter/material.dart';
+
+import './widgets/user_transactions.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,8 +15,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  String titleInput;
-  String amountInput;
+  // String titleInput;
+  // String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +38,7 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
-          NewTransaction(),
-          TransactionList(),
+          UserTransactions()
         ],
       ),
     );
